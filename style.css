@@ -121,15 +121,20 @@ ul li img {
   cursor: pointer;
 }
 
+.image-overlay .icon:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.author-name:hover {
+  color: aqua;
+  cursor: pointer;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-.image-overlay .icon:hover {
-  opacity: 1;
-  cursor: pointer;
 }
