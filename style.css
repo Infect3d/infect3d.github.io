@@ -1,56 +1,124 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  background-color: hsl(212, 45%, 89%);
-  padding-top: 10%;
+  background-color: hsl(217, 54%, 11%);
+  color: hsl(0, 0%, 100%);
   font-family: "Outfit";
-}
-
-@media {
-  .body {
-    padding-top: 20%;
-  }
+  font-size: 18px;
 }
 
 .container {
-  background-color: hsl(0, 0%, 100%);
-  padding: 1rem;
-  border-radius: 25px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (min-width: 500px) {
-  .container {
-    width: 350px;
-    margin: 0 auto 1.5rem;
-  }
+article {
+  background-color: hsl(216, 50%, 16%);
+  height: 560px;
+  width: 300px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 30px 10px 20px hsla(215, 61%, 10%, 0.801),
+    0 30px 10px 40px hsla(215, 61%, 10%, 0.521);
 }
 
-.hero-image {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 0.5rem;
+article .hero-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.title {
+  margin-top: 1rem;
 }
 
 .description {
-  text-align: center;
-  padding-top: 1.5rem;
-  padding-right: 0.5rem;
-  padding-bottom: 0.5rem;
-  color: hsl(218, 44%, 22%);
-  font-weight: bold;
+  margin-top: 1rem;
+  list-style: none;
+  color: hsl(215, 30%, 41%);
 }
-.text {
-  text-align: center;
-  padding-top: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+
+.creation-of {
+  color: hsl(215, 30%, 41%);
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin-top: 1rem;
   padding-bottom: 1rem;
+  border-bottom: 2px solid hsl(215, 32%, 27%);
+}
+
+ul li {
+  display: flex;
+  align-items: center;
   font-size: 15px;
-  color: hsl(0, 0%, 55%);
+}
+
+ul li:first-child {
+  color: aqua;
+}
+
+ul li:last-child {
+  color: hsl(215, 30%, 41%);
+}
+
+ul li img {
+  padding-right: 0.3rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-items: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.author img {
+  width: 30px;
+  margin-right: 12px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.image-overlay {
+  position: relative;
+}
+
+.image-overlay .overlay {
+  position: absolute;
+  background-color: rgba(0, 255, 255, 0.616);
+  z-index: 1;
+  width: 100%;
+  height: 99%;
+  opacity: 0;
+  border-radius: 10px;
+}
+
+.image-overlay .icon {
+  position: absolute;
+  left: 42%;
+  top: 42%;
+  opacity: 0;
+  z-index: 9999;
+}
+
+.title:hover {
+  color: aqua;
+  cursor: pointer;
+}
+
+.image-overlay .overlay:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .attribution {
@@ -59,4 +127,9 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.image-overlay .icon:hover {
+  opacity: 1;
+  cursor: pointer;
 }
